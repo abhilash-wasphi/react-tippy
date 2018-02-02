@@ -2363,7 +2363,7 @@ var Tippy = function () {
         // run the hidden callback, we need to check the computed opacity style.
         // This prevents glitchy behavior of the transition when quickly showing
         // and hiding a tooltip.
-        if ((0, _isVisible2.default)(popper) || !appendTo.contains(popper) || getComputedStyle(tooltip).opacity === '1') return;
+        if ((0, _isVisible2.default)(popper) || !appendTo.contains(popper) || getComputedStyle(tooltip).opacity !== '1') return;
 
         el.removeEventListener('mousemove', _followCursorHandler2.default);
         data.popperInstance.disableEventListeners();
